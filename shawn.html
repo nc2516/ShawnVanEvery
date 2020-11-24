@@ -1,0 +1,161 @@
+
+<html>
+
+    <head>
+        <title>Shawn Van Every</title>
+            <style>
+                body {
+                    background-color: #47d1d1;
+                    width: 100%;
+                    animation: bgcolor infinite 10s;
+                }
+                img {
+                    margin:0;padding:0;
+                    position: fixed;
+                    top: 25%;
+                    left: 12.5%;
+                    z-index: 3;
+                }
+                @keyframes bgcolor{
+                    0%
+                    { 
+                        background: #2a2aa2   
+                    }
+                    25%
+                    {
+                        background: #4949d0;
+                    }
+                    50%
+                    {
+                        background: #47d1d1;
+                    }
+                    75%
+                    {
+                        background: #4949d0;
+                    }
+                    100%
+                    {
+                        background: #2a2aa2;
+                    }
+
+
+                }
+
+#background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 2;
+
+}
+
+#content {
+    z-index: 2;
+    top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    font-size: 50;
+    color: #47d1d1;
+    left: 6%;
+    position: fixed;
+}
+
+
+#soundbar {
+    z-index: 3;
+    position: fixed;
+    left: 65.5%;
+    top:80%;
+}
+
+#triangle {
+    z-index: 3;
+    height: 0px;
+    width: 0px;
+    border: 45px solid;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-left-color: #ffffff;
+    border-right-color: transparent;
+    position: fixed;
+    left: 50%;
+    top: 15%;
+}
+
+
+
+            </style>
+
+        <script type="text/javascript">
+                
+                window.addEventListener('load', function() {
+                    var words = document.getElementById("words");
+                    var shawn = document.getElementById("wtf");
+                    console.log(shawn);
+
+                    shawn.addEventListener('timeupdate', function(evt){
+                        //console.log(evt);
+                    console.log(shawn.currentTime);
+
+                    if (shawn.currentTime >= 1 && shawn.currentTime < 6) {
+                        words.innerHTML = "Um... how many of you are like...";
+                    } else if (shawn.currentTime >= 6 && shawn.currentTime < 8) {
+                        words.innerHTML = "alright I'll just swear, it's more fun";
+                    } else if (shawn.currentTime >= 8 && shawn.currentTime < 9) {
+                        words.innerHTML = "what the fuck";
+                    } else if (shawn.currentTime >= 9 && shawn.currentTime < 12) {
+                        words.innerHTML = "or w-t-f... or";
+                    } else if (shawn.currentTime >= 12 && shawn.currentTime < 14){
+                        words.innerHTML = "where.. where do-"
+                    } else if (shawn.currentTime >= 14 && shawn.currentTime < 15){
+                        words.innerHTML = "it's on video..."
+                    } else if (shawn.currentTime >= 15 && shawn.currentTime < 16){
+                        words.innerHTML = "*shawn realizes he swore on video*"
+                    } else if (shawn.currentTime >= 16 && shawn.currentTime < 19){
+                        words.innerHTML = "*insert class laugh*"
+                    } else if (shawn.currentTime >= 19 && shawn.currentTime < 21){
+                        words.innerHTML = "why aren't you telling me this!?"
+                    } else if (shawn.currentTime >= 24 && shawn.currentTime < 26){
+                        words.innerHTML = "why aren't you telling me this!?"
+                    } else if (shawn.currentTime >= 21 && shawn.currentTime < shawn.duration - 3) {
+                        shawn.currentTime = shawn.duration - 2;
+                    }
+
+
+                    
+                });
+            });
+        </script>
+
+    </head>
+
+
+    <body>
+        
+        <div id="background"></div>
+        <img src="proshawn.png" style="width:27%;height:auto;"/>
+
+        <div id="soundbar"><audio id="wtf" src="week3 class2 1.mp3" controls></audio></div>
+        <p id="words" style="
+            z-index: 3;
+            position: fixed;
+            left: 55%;
+            top: 45%;
+            font-family: Helvetica, sans-serif;
+            font-size: 25;
+            text-transform: uppercase;
+            color: #ffffff;
+        "><div id="content">
+                <p>Shawn Van Every</p></div>
+            
+
+                
+       <div id="triangle"></div>
+    
+    </body>
+
+</html>
